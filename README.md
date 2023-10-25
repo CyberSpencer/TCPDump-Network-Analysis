@@ -1,10 +1,6 @@
 # TCPDump Network Analysis: A Deep Dive into Network Packets 🌐
 
-Are you ready to delve into the world of network packets? You're in the perfect spot. 
-
-## Why Should You Use TCPDump? 🧐
-
-**TCPDump** is not your run-of-the-mill network tool. It's your go-to packet analyzer that functions like an X-ray for your network—unveiling the details that usually go unnoticed. Whether you're a network admin, cybersecurity guru, or a curious learner, TCPDump is a tool you'll want in your arsenal.
+**TCPDump** is a comand line network tool. It's a powerful analyzer that functions like an X-ray for your network—unveiling the details that might otherwise go unnoticed. Whether you're a network admin, cybersecurity profesional, or a curious learner, TCPDump is a tool you'll want in your arsenal.
 
 ---
 
@@ -40,21 +36,13 @@ This ^ is basic sytax for TCPdump
 - **Capture a Specific Number (XXX) of Packets**: `tcpdump -c XXX`
 - **Capture Packets from a Specific Host**: `tcpdump host xxx.xxx.xxx.xxx`
 - **Capture Packets from a Range of IPs**: `tcpdump net xxx.xxx.xxx.xxx`
-- **Capture Packets to or from a Specific Port**: `tcpdump port 80`
+- **Capture Packets to or from a Specific Port**: `tcpdump port xx`
 - **Capture Only Incoming Packets**: `tcpdump src xxx.xxx.xxx.xxx`
 - **Capture Only Outgoing Packets**: `tcpdump dst xxx.xxx.xxx.xxx`
 - **Write Captured Data to a File**: `tcpdump -w capture.pcap`
 - **Read Captured Data from a File**: `tcpdump -r capture.pcap`
-- **Filter by Protocol and Port**: `tcpdump 'udp port 53'`
+- **Filter by Protocol and Port**: `tcpdump 'udp port xx'`
 - **Show Only ICMP Echo Requests**: `tcpdump 'icmp[icmptype] = icmp-echo'`
-
----
-
-## Filter Like a Pro 🎯
-
-TCPDump offers a wealth of filtering options. Begin to harness its full power with these:
-
-- **Focus on a Specific Port(22)**: `tcpdump port 22`
 - **Track ICMP Packets**: `tcpdump icmp`
 - **Capture HTTP Requests**: `tcpdump 'tcp port 80` 
 - **Capture FTP Traffic**: `tcpdump 'tcp port 21'`
@@ -65,7 +53,7 @@ TCPDump offers a wealth of filtering options. Begin to harness its full power wi
 
 ## Analyzing Packets 🔍
 
-So you've captured a stream of packets—what's next? Understanding what you're looking at can help with troubleshooting, network optimization, and cybersecurity efforts. Here's a rundown of some aspects to consider:
+So you've captured a stream of packets—what's next? Understanding what you're looking at can help with troubleshooting, network optimization, and cybersecurity efforts. Here's some aspects to consider:
 
 ### 📍 Source and Destination IPs
 
@@ -103,14 +91,13 @@ Pay close attention to packets that:
 
 These could all be signs of unauthorized or malicious activity.
 
-By understanding these components, you can paint a clearer picture of your network's activity and take more informed actions.
-
+Understanding these components aids in painting a more percise picture of your network's activity thus allowing more informed decision making.
 
 ---
 
 ## Troubleshooting Tips 😓
 
-Hit a snag? Don't sweat it; common issues usually have easy fixes:
+Common issues with easy fixes:
 
 - 🚫 **Permission Denied**: You'll likely need administrative or root access.
 - ❓ **Interface Not Found**: Use `tcpdump -D` to list available interfaces.
@@ -124,7 +111,7 @@ TCPDump is a powerful tool, so wield it responsibly:
 - 🚨 **Always secure proper authorization**
 - 🕵️‍♂️ **Handle sensitive data cautiously**
 
-> **Note**: This guide is intended for educational purposes. Always adhere to ethical and legal guidelines.
+> **Note**: This guide is intended for educational purposes only.
 
 ---
 
